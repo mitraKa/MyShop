@@ -7,41 +7,38 @@ using System.Threading.Tasks;
 
 namespace MyShopWPFUI.ViewModels
 {
-    public class ShellViewModel : Screen 
+    class LoginViewModel : Screen
     {
         private string _userName;
 
-        public string UserName
+        public string username
         {
             get { return _userName; }
-            set
-            {
+            set {
                 _userName = value;
-                NotifyOfPropertyChange(() => UserName);
-            }
+                NotifyOfPropertyChange(() => username);
+                }
         }
 
         private string _password;
 
-        public string Password
+        public string password
         {
             get { return _password; }
             set
             {
                 _password = value;
-                NotifyOfPropertyChange(() => Password);
+                NotifyOfPropertyChange(() => password);
             }
         }
 
-        // TODO - Need to check the Data Entry
-
-
         public void LogIn(string username, string password)
         {
-         
             _userName = username;
             _password = password;
-            Console.WriteLine("User Logged in");
+            Console.WriteLine("we just clicked");
+
         }
+
     }
 }
