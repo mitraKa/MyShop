@@ -66,4 +66,7 @@
   <ItemGroup>
     <None Include="PublishLocations\MyShopDatabase.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Employee.sql" />
+  </ItemGroup>
 </Project>
