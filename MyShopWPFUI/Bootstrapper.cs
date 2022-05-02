@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using MyShopWPFUI.Helpers;
 using MyShopWPFUI.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace MyShopWPFUI
 
             _container
                 .Singleton<IWindowManager, WindowManager>()
+				.Singleton<IAPIHandler, APIHandler>()
                 .Singleton<IEventAggregator, EventAggregator>();
 
             GetType().Assembly.GetTypes()

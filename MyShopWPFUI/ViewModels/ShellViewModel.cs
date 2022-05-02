@@ -4,14 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyShopWPFUI.Helpers;
 
 namespace MyShopWPFUI.ViewModels
 {
     public class ShellViewModel : Screen 
     {
         private string _userName;
+		private string _password;
+		private IAPIHandler _apiHandler;
 
-        public string UserName
+
+		public string UserName
         {
             get { return _userName; }
             set
@@ -20,8 +24,6 @@ namespace MyShopWPFUI.ViewModels
                 NotifyOfPropertyChange(() => UserName);
             }
         }
-
-        private string _password;
 
         public string Password
         {
@@ -33,14 +35,20 @@ namespace MyShopWPFUI.ViewModels
             }
         }
 
+		public ShellViewModel(IAPIHandler apihandler)
+		{
+			_apiHandler = apihandler;
+		}
+
         // TODO - Need to check the Data Entry
 
 
-        public void LogIn(string username, string password)
+        public async Task LogIn(string username, string password)
         {
          
             _userName = username;
             _password = password;
+			var result = await _apiHandler.AuthenticateUser(_userName, _password);
             Console.WriteLine("User Logged in");
         }
     }
