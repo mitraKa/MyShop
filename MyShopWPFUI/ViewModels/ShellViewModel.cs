@@ -48,8 +48,18 @@ namespace MyShopWPFUI.ViewModels
          
             _userName = username;
             _password = password;
-			var result = await _apiHandler.AuthenticateUser(_userName, _password);
-            Console.WriteLine("User Logged in");
+
+			try
+			{
+				var result = await _apiHandler.AuthenticateUser(_userName, _password);
+
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+
+			}
+            
         }
     }
 }

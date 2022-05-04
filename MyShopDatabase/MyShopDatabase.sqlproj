@@ -68,5 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Employee.sql" />
+    <Build Include="dbo\Stored Procedure\SpEmployeeFind.sql" />
   </ItemGroup>
 </Project>

@@ -9,6 +9,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MyShopDatabase", "MyShopDat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShopWPFUI", "MyShopWPFUI\MyShopWPFUI.csproj", "{19BE90A3-C4E4-454F-AEA6-F9C00F7DC238}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyShopDataManager.Library", "ClassLibrary1\MyShopDataManager.Library.csproj", "{45466390-3378-43B2-BC98-862E8B6D1DA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{19BE90A3-C4E4-454F-AEA6-F9C00F7DC238}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19BE90A3-C4E4-454F-AEA6-F9C00F7DC238}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19BE90A3-C4E4-454F-AEA6-F9C00F7DC238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45466390-3378-43B2-BC98-862E8B6D1DA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45466390-3378-43B2-BC98-862E8B6D1DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45466390-3378-43B2-BC98-862E8B6D1DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45466390-3378-43B2-BC98-862E8B6D1DA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
