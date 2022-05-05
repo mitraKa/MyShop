@@ -16,6 +16,7 @@ namespace MyShopDataManager.Controllers
 	public class EmployeeController : ApiController
     {
         // GET: api/Employee/5
+		[HttpGet]
         public EmployeeModel GetEmployeeById()
         {
 			EmployeeDataAccess EmpDataAcc = new EmployeeDataAccess();

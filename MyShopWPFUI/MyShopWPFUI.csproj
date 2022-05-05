@@ -81,9 +81,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Helpers\APIHandler.cs" />
-    <Compile Include="Helpers\IAPIHandler.cs" />
-    <Compile Include="Models\LoggedInUser.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="Views\LoginView.xaml.cs">
@@ -139,6 +136,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyShopWPFUI.Library\MyShopWPFUI.Library.csproj">
+      <Project>{11052a22-85f8-4394-bf5b-7dc33a78b868}</Project>
+      <Name>MyShopWPFUI.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

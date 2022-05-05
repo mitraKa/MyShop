@@ -1,5 +1,4 @@
 ﻿using Caliburn.Micro;
-using MyShopWPFUI.Helpers;
 using MyShopWPFUI.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -7,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using MyShopWPFUI.Library.APIHelpers;
+using MyShopWPFUI.Library.Models;
 
 namespace MyShopWPFUI
 {
@@ -25,6 +26,7 @@ namespace MyShopWPFUI
             _container
                 .Singleton<IWindowManager, WindowManager>()
 				.Singleton<IAPIHandler, APIHandler>()
+				.Singleton<IAuthenticatedEmployeeModel, AuthenticatedEmployeeModel>()
                 .Singleton<IEventAggregator, EventAggregator>();
 
             GetType().Assembly.GetTypes()

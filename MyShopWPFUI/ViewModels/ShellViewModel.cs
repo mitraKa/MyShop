@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MyShopWPFUI.Helpers;
+using MyShopWPFUI.Library.APIHelpers;
+
 
 namespace MyShopWPFUI.ViewModels
 {
@@ -52,6 +53,7 @@ namespace MyShopWPFUI.ViewModels
 			try
 			{
 				var result = await _apiHandler.AuthenticateUser(_userName, _password);
+				await _apiHandler.GetLoggedInEmployeeInfo(result.Access_Token);
 
 			}
 			catch (Exception ex)
