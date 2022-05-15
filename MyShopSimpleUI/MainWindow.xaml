@@ -1,0 +1,59 @@
+﻿<Window x:Class="MyShopSimpleUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyShopSimpleUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="960"
+        FontSize="22">
+
+    <Grid>
+        <Border Background="#272548"
+            CornerRadius="60">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="1" Grid.Column="1" FontSize="32" 
+                       HorizontalAlignment="Center" Margin="0 50 40 0"
+                       Foreground="White">
+            User name :
+                </TextBlock>
+                <TextBox Grid.Row="1" Grid.Column="2" MinWidth="200" 
+                     Margin="0 50 0 50" MinHeight="50" FontSize="22"
+                         TextAlignment="Justify" x:Name="User">
+                </TextBox>
+                <TextBlock Grid.Row="2" Grid.Column="1" FontSize="32" 
+                       HorizontalAlignment="Center" Margin="0 0 40 0"
+                       Foreground="White">
+            Password :
+                </TextBlock>
+                <TextBox Grid.Row="2" Grid.Column="2" MinWidth="150" 
+                     MinHeight="50" Margin="0 0 0 50" FontSize="22"
+                         TextAlignment="Center" x:Name="Pass">
+
+                </TextBox>
+                    <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" 
+                    MinWidth="100" FontSize="32" Background="Orange" 
+                    Margin="40 100 40 100" TextBlock.TextAlignment="Center"
+                        x:Name="Log" Click="ButtonClick">
+                        Loggin
+                    </Button>
+                </Grid>
+        </Border>
+
+    </Grid>
+ 
+</Window>

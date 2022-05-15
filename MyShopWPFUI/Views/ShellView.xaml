@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="1" Grid.Column="1" FontSize="32" HorizontalAlignment="Center">
-            UserName
+            UserTestName
         </TextBlock>
         <TextBox x:Name="UserName" Grid.Row="1" Grid.Column="2" MinWidth="150"></TextBox>
         <TextBlock Grid.Row="2" Grid.Column="1" FontSize="32" HorizontalAlignment="Center">

@@ -5,29 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyShopWPFUI.Views"
         mc:Ignorable="d"
-        Title="LoginView" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        Title="LoginView" Height="550" Width="920"
+        Background="Transparent">
+    <Border Background="#272548"
+            CornerRadius="60">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="1" Grid.Column="1" FontSize="32" HorizontalAlignment="Center">
-            UserName
-        </TextBlock>
-        <TextBox Grid.Row="1" Grid.Column="2" MinWidth="150" Margin="50 10 0 50" MinHeight="50"></TextBox>
-        <TextBlock Grid.Row="2" Grid.Column="1" FontSize="32" HorizontalAlignment="Center" >
-            Password
-        </TextBlock>
-        <TextBox Grid.Row="2" Grid.Column="2" MinWidth="150" Margin="50 10 0 50" MinHeight="50"></TextBox>
-        <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" MinWidth="100" FontSize="32"> Loggin</Button>
-    </Grid>
+            <TextBlock Grid.Row="1" Grid.Column="1" FontSize="32" 
+                       HorizontalAlignment="Center" Margin="0 50 40 0"
+                       Foreground="White">
+            UserName :
+            </TextBlock>
+            <TextBox Grid.Row="1" Grid.Column="2" MinWidth="200" 
+                     Margin="0 50 0 50" MinHeight="50">
+            </TextBox>
+            <TextBlock Grid.Row="2" Grid.Column="1" FontSize="32" 
+                       HorizontalAlignment="Center" Margin="0 0 40 0"
+                       Foreground="White">
+            Password :
+            </TextBlock>
+            <TextBox Grid.Row="2" Grid.Column="2" MinWidth="150" 
+                     MinHeight="50" Margin="0 0 0 50">
+                
+            </TextBox>
+            <Button Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" 
+                    MinWidth="100" FontSize="32" Background="Orange" 
+                    Margin="40 100 40 100" TextBlock.TextAlignment="Center">
+                Loggin
+            </Button>
+        </Grid>
+    </Border>
 </Window>
