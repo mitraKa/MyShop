@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace MyShopDataManager.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class ProductController : ApiController
     {
         [HttpGet]

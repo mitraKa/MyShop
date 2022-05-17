@@ -62,6 +62,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="APIHelpers\ProductEndPoint.cs" />
+    <Compile Include="Models\ProductsModel.cs" />
     <Compile Include="Views\SalePointView.xaml.cs">
       <DependentUpon>SalePointView.xaml</DependentUpon>
     </Compile>
@@ -118,6 +120,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\MyShopDataManager.Library.csproj">
+      <Project>{45466390-3378-43B2-BC98-862E8B6D1DA9}</Project>
+      <Name>MyShopDataManager.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

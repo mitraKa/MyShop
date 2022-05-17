@@ -1,5 +1,9 @@
-﻿using System;
+﻿using ClassLibrary1.Models;
+using MyShopSimpleUI.APIHelpers;
+using MyShopSimpleUI.Models;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,9 +26,26 @@ namespace MyShopSimpleUI.Views
 	{
 
 		private static SalePointView _instance = null;
+		private ProductEndPoint productApi = new ProductEndPoint();
+		private BindingList<ProductsModel> _products;
 		public SalePointView()
 		{
 			InitializeComponent();
+			//productList.ItemsSource = _products;
+		}
+
+		protected override async void OnInitialized(EventArgs e)
+		{
+			base.OnInitialized(e);
+			await LoadProductList();
+		}
+
+		
+		private async Task LoadProductList()
+		{
+			var prod = await productApi.GetAll();
+			_products = new BindingList<ProductsModel>(prod);
+			productList.ItemsSource = _products;
 		}
 		public static SalePointView GetSalePointView()
 		{

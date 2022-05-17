@@ -42,6 +42,11 @@
             <ListBox x:Name="productList" Grid.Column="1" Grid.ColumnSpan="2"
                      Grid.Row="2" Grid.RowSpan="5" Margin="20 0 "
                      Background="#dcdcdc">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding ProductName}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
 
             </ListBox>
             <Label Grid.Row="7" Grid.Column="1" FontSize="22"

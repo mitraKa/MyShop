@@ -20,7 +20,6 @@ namespace MyShopSimpleUI
 		
 		public APIHandler( )
 		{
-		
 			InitializeClient();
 		}
 
