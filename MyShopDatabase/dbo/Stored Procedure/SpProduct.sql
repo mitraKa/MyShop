@@ -3,7 +3,7 @@ AS
 BEGIN
 
     set nocount on;
-	SELECT Id, ProductName, ProductDescription, Quantity
+	SELECT Id, ProductName, ProductDescription, Quantity, SalePrice
 	FROM Products
 	ORDER BY ProductName
 

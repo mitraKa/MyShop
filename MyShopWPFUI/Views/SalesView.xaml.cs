@@ -22,7 +22,7 @@ namespace MyShopWPFUI.Views
 	{
 		public SalesView()
 		{
-			InitializeComponent();
+			//InitializeComponent();
 		}
 	}
 }

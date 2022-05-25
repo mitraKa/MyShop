@@ -33,13 +33,13 @@ namespace MyShopSimpleUI.APIHelpers
 			_apiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 		}
 
-		public async Task<List<ProductsModel>> GetAll( )
+		public async Task<List<CartItemModel>> GetAll( )
 		{
 			using (HttpResponseMessage response = await ApiClient.GetAsync("/api/Product"))
 			{
 				if (response.IsSuccessStatusCode)
 				{
-					var result = await response.Content.ReadAsAsync<List<ProductsModel>>();
+					var result = await response.Content.ReadAsAsync<List<CartItemModel>>();
 					return result;	
 				}
 				else

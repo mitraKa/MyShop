@@ -22,49 +22,34 @@ namespace MyShopSimpleUI
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-
 		private APIHandler _apiHandler = new APIHandler();
-
-
 		public MainWindow()
 		{
 			InitializeComponent();
-			
 		}
 
-
-
-
 		// TODO - Need to check the Data Entry
-
-
 		public void ButtonClick(object sender, RoutedEventArgs e)
 		{
-			
 			var temp =  LogingHelper(User.Text, Pass.Text);
 			SalePointView salePointView = new SalePointView();
 			var window = new System.Windows.Window();
 			window.Content = new SalePointView();
 			window.Show();
-
-
 		}
 
 		public async Task LogingHelper(string username, string password)
 		{
-			
 			try
 			{
 				var result = await _apiHandler.AuthenticateUser(username, password);
 				await _apiHandler.GetLoggedInEmployeeInfo(result.Access_Token);
 				//await _event.PublishOnUIThreadAsync(new LoginEvent());
-
 			}
 			catch (Exception ex)
 			{
 				Console.WriteLine(ex.Message);
 			}
-
 		}
 	}
 }

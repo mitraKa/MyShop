@@ -12,5 +12,6 @@ namespace ClassLibrary1.Models
 		public string ProductName { get; set; }
 		public string ProductDescription { get; set; }
 		public string Quantity { get; set; }
+		public string SalePrice { get; set; }
 	}
 }

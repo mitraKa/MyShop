@@ -27,7 +27,11 @@ namespace MyShopSimpleUI.Views
 
 		private static SalePointView _instance = null;
 		private ProductEndPoint productApi = new ProductEndPoint();
-		private BindingList<ProductsModel> _products;
+		private BindingList<Models.CartItemModel> _products;
+		private BindingList<CartItemModel> _carts;
+		
+		
+		private Models.CartItemModel selectedProduct;
 		public SalePointView()
 		{
 			InitializeComponent();
@@ -44,8 +48,11 @@ namespace MyShopSimpleUI.Views
 		private async Task LoadProductList()
 		{
 			var prod = await productApi.GetAll();
-			_products = new BindingList<ProductsModel>(prod);
+			_products = new BindingList<Models.CartItemModel>(prod);
 			productList.ItemsSource = _products;
+			_carts = new BindingList<Models.CartItemModel>();
+			//Cart.ItemsSource = _carts;
+			//Cart.ItemsSource = _carts;
 		}
 		public static SalePointView GetSalePointView()
 		{
@@ -55,5 +62,37 @@ namespace MyShopSimpleUI.Views
 			}
 			return _instance;
 		}
+
+		private bool CanAddToTheCard()
+		{
+			selectedProduct = productList.SelectedItem as Models.CartItemModel;
+			selectedProduct.QuantityInTheCart = Quantity.Text;
+			if (Int32.Parse(Quantity.Text) > 0 && selectedProduct.Quantity > Int32.Parse(Quantity.Text))
+			{
+				return true;
+			}
+			return false;
+		}
+
+		private void AddProduct_Click(object sender, RoutedEventArgs e)
+		{
+			CartItemModel cartItem = _carts.FirstOrDefault(x => x.ProductName == selectedProduct.ProductName);
+			if (CanAddToTheCard())
+			{		
+				selectedProduct = productList.SelectedItem as CartItemModel;
+				
+				//if ( cartItem != null)
+				//{
+				//	selectedProduct.QuantityInTheCart = Quantity.Text + selectedProduct.QuantityInTheCart;
+				//}
+				//else 
+				{
+					Cart.Items.Add(selectedProduct);
+					//_carts.Add(selectedProduct);		
+				}
+			}
+		}
+
+
 	}
 }

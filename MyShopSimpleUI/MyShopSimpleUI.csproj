@@ -63,6 +63,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="APIHelpers\ProductEndPoint.cs" />
+    <Compile Include="Models\CartItemModel.cs" />
+    <Compile Include="Models\CartModel.cs" />
     <Compile Include="Models\ProductsModel.cs" />
     <Compile Include="Views\SalePointView.xaml.cs">
       <DependentUpon>SalePointView.xaml</DependentUpon>

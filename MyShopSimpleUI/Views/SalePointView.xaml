@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:MyShopSimpleUI.Views"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="960">
-    <Border Background="#272548"
+    <Border Background="#454545"
             CornerRadius="60">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -60,7 +60,7 @@
             </TextBox>
             <Button x:Name="AddProduct" Grid.Row="8" Grid.Column="1"
                     Margin="20 17" FontSize="22"
-                    Background="Orange" >
+                    Background="Orange" Click="AddProduct_Click" >
                 Add Item
             </Button>
 
@@ -72,7 +72,12 @@
             <ListBox x:Name="Cart" Grid.Column="3" Grid.ColumnSpan="2"
                      Grid.Row="2" Grid.RowSpan="4" Margin="20 0 20 0"
                      Background="#dcdcdc">
-
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding DisplayProduct}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                
             </ListBox>
 
             <Label Grid.Column="3" Grid.Row="6" FontSize="20"
